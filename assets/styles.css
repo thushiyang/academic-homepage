@@ -1008,7 +1008,8 @@ footer {
 }
 
 .research-module-body {
-  max-width: 980px;
+  width: 100%;
+  max-width: none;
 }
 
 .research-module-body h2 {
