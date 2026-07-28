@@ -1,0 +1,87 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 0 400 420" role="img" aria-labelledby="title desc">
+  <title id="title">3M-DT hydrosphere digital twin logo concept</title>
+  <desc id="desc">A compact split circular emblem showing physical hydrosphere processes on the left and a digital twin grid on the right, with 3M-DT lettering below.</desc>
+  <defs>
+    <clipPath id="disc">
+      <circle cx="360" cy="170" r="138" />
+    </clipPath>
+    <linearGradient id="sky" x1="220" x2="460" y1="40" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7fbfc" />
+      <stop offset="0.52" stop-color="#dceff1" />
+      <stop offset="1" stop-color="#efe4f5" />
+    </linearGradient>
+    <linearGradient id="water" x1="210" x2="510" y1="230" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38a6c1" />
+      <stop offset="1" stop-color="#1c506d" />
+    </linearGradient>
+    <linearGradient id="land" x1="205" x2="360" y1="185" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d9b15e" />
+      <stop offset="1" stop-color="#2f6f55" />
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#2b1734" flood-opacity="0.13" />
+    </filter>
+  </defs>
+
+  <rect width="720" height="420" fill="#fbf9fc" />
+  <g filter="url(#softShadow)">
+    <circle cx="360" cy="170" r="150" fill="#ffffff" />
+    <circle cx="360" cy="170" r="143" fill="none" stroke="#6f2c8f" stroke-opacity="0.26" stroke-width="2" />
+    <g clip-path="url(#disc)">
+      <rect x="205" y="24" width="310" height="300" fill="url(#sky)" />
+
+      <!-- Physical hydrosphere half -->
+      <path d="M208 290 C240 246 268 262 300 224 C326 195 344 220 360 188 L360 324 L205 324 Z" fill="url(#land)" />
+      <path d="M217 278 C252 260 276 270 304 242 C326 220 342 228 360 208" fill="none" stroke="#2f89a8" stroke-width="9" stroke-linecap="round" />
+      <path d="M230 286 C258 276 278 282 304 262 C328 244 342 246 360 232" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="2.2" stroke-linecap="round" />
+      <path d="M224 214 L260 154 L286 214 Z" fill="#7255a2" fill-opacity="0.62" />
+      <path d="M252 218 L304 122 L352 218 Z" fill="#8f7bc0" fill-opacity="0.7" />
+      <path d="M304 122 L326 178 L292 166 Z" fill="#ffffff" fill-opacity="0.9" />
+      <path d="M244 108 C260 78 292 90 300 114 C328 108 344 124 340 148 C310 148 280 148 240 148 C222 146 218 122 244 108 Z" fill="#ffffff" fill-opacity="0.94" />
+      <path d="M266 160 C272 178 270 190 264 206 M292 160 C298 180 296 194 288 212 M320 162 C324 178 322 192 316 208" fill="none" stroke="#6f2c8f" stroke-opacity="0.36" stroke-width="3" stroke-linecap="round" />
+      <path d="M222 244 C258 230 298 232 360 218" fill="none" stroke="#6f2c8f" stroke-opacity="0.24" stroke-width="2" stroke-dasharray="4 8" />
+
+      <!-- Digital twin half -->
+      <rect x="360" y="24" width="155" height="300" fill="#f8f6fb" />
+      <path d="M360 292 C394 250 424 266 456 230 C486 198 504 220 518 196 L518 324 L360 324 Z" fill="#e7e0ef" />
+      <path d="M360 260 C398 238 428 246 462 218 C490 196 505 196 520 184" fill="none" stroke="#2f89a8" stroke-opacity="0.72" stroke-width="6" stroke-linecap="round" />
+      <path d="M370 92 H512 M370 126 H512 M370 160 H512 M370 194 H512 M370 228 H512 M386 72 V276 M420 72 V276 M454 72 V276 M488 72 V276" stroke="#6f2c8f" stroke-opacity="0.18" stroke-width="1.5" />
+      <path d="M374 238 C396 220 408 232 428 210 C446 190 464 198 482 176 C494 160 504 154 516 150" fill="none" stroke="#2f89a8" stroke-opacity="0.34" stroke-width="9" stroke-linecap="round" />
+      <path d="M372 246 C394 228 412 238 434 214 C452 196 470 202 488 180 C502 164 512 160 518 154" fill="none" stroke="#ffffff" stroke-opacity="0.82" stroke-width="2" stroke-linecap="round" />
+      <path d="M374 258 C400 248 420 256 448 236 C474 218 492 224 516 208" fill="none" stroke="#2f89a8" stroke-opacity="0.22" stroke-width="5" stroke-linecap="round" />
+      <path d="M374 276 C410 266 438 274 470 256 C490 244 506 246 520 238" fill="none" stroke="#2f89a8" stroke-opacity="0.18" stroke-width="4" stroke-linecap="round" />
+      <path d="M380 228 C406 184 434 178 456 146 C474 120 494 116 510 92" fill="none" stroke="#6f2c8f" stroke-width="4" stroke-linecap="round" />
+      <path d="M386 218 C412 196 440 198 468 166 C488 142 502 134 516 120" fill="none" stroke="#a5792a" stroke-opacity="0.8" stroke-width="2.5" stroke-dasharray="5 7" />
+      <circle cx="386" cy="218" r="7" fill="#6f2c8f" />
+      <circle cx="456" cy="146" r="7" fill="#2f89a8" />
+      <circle cx="510" cy="92" r="7" fill="#a5792a" />
+      <circle cx="468" cy="166" r="5" fill="#6f2c8f" fill-opacity="0.76" />
+      <path d="M382 112 C398 84 430 90 444 118 C462 152 492 144 510 126" fill="none" stroke="#6f2c8f" stroke-opacity="0.72" stroke-width="3" stroke-linecap="round" />
+      <path d="M382 132 C402 118 424 126 442 148 C462 174 490 166 512 146" fill="none" stroke="#a5792a" stroke-opacity="0.62" stroke-width="2" stroke-dasharray="4 6" />
+      <path d="M376 182 C398 170 414 176 432 160 C452 142 470 150 490 132 C502 122 512 118 520 116" fill="none" stroke="#1c506d" stroke-opacity="0.32" stroke-width="2" />
+      <path d="M382 204 C406 198 420 204 442 190 C466 174 486 180 514 164" fill="none" stroke="#1c506d" stroke-opacity="0.24" stroke-width="2" />
+      <circle cx="398" cy="112" r="3.6" fill="#6f2c8f" fill-opacity="0.88" />
+      <circle cx="424" cy="126" r="3.6" fill="#2f89a8" fill-opacity="0.88" />
+      <circle cx="442" cy="148" r="3.6" fill="#a5792a" fill-opacity="0.88" />
+      <circle cx="490" cy="132" r="3.6" fill="#6f2c8f" fill-opacity="0.82" />
+      <path d="M392 82 L412 94 L430 82 L450 98 L472 82 L506 102" fill="none" stroke="#6f2c8f" stroke-opacity="0.32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M388 72 L420 72 L420 102 L388 102 Z M450 70 L506 70 L506 104 L450 104 Z" fill="none" stroke="#6f2c8f" stroke-opacity="0.22" stroke-width="1.4" />
+      <path d="M390 250 L492 250" stroke="#1c506d" stroke-opacity="0.38" stroke-width="3" stroke-linecap="round" />
+      <path d="M390 266 L472 266" stroke="#1c506d" stroke-opacity="0.22" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Shared water base -->
+      <path d="M205 266 C258 246 300 268 360 246 C420 224 470 240 520 216 L520 324 L205 324 Z" fill="url(#water)" fill-opacity="0.9" />
+      <path d="M218 276 C270 260 302 278 360 258 C414 238 470 250 514 232" fill="none" stroke="#ffffff" stroke-opacity="0.62" stroke-width="2" />
+      <path d="M226 296 C286 282 318 298 360 280 C420 256 470 270 512 252" fill="none" stroke="#ffffff" stroke-opacity="0.34" stroke-width="2" />
+    </g>
+
+    <!-- DT transition line -->
+    <path d="M360 48 C342 92 382 126 360 170 C342 214 378 248 360 304" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" />
+    <path d="M360 48 C342 92 382 126 360 170 C342 214 378 248 360 304" fill="none" stroke="#6f2c8f" stroke-width="4" stroke-linecap="round" />
+    <text x="374" y="176" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="850" fill="#6f2c8f">dt</text>
+  </g>
+
+  <text x="360" y="352" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="850" fill="#4f176f">3M-DT</text>
+  <text x="360" y="380" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="760" fill="#647082">Multi-scale · Multi-physics · Multi-disciplinary</text>
+  <text x="360" y="402" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="760" fill="#647082">Digital Twins</text>
+</svg>

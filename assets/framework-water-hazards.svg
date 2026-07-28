@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" role="img" aria-labelledby="title desc">
+  <title id="title">Water hazards illustration</title>
+  <desc id="desc">A stylized storm-rain, flood, great-wave, and breakwater motif representing water hazards.</desc>
+  <defs>
+    <linearGradient id="skyHazard" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff8ef"/>
+      <stop offset="0.48" stop-color="#edf7f9"/>
+      <stop offset="1" stop-color="#f3e8f6"/>
+    </linearGradient>
+    <linearGradient id="stormCloud" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#6f2c8f"/>
+      <stop offset="0.58" stop-color="#17476a"/>
+      <stop offset="1" stop-color="#2f89a8"/>
+    </linearGradient>
+    <linearGradient id="deepWave" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#123f5d"/>
+      <stop offset="0.45" stop-color="#2f89a8"/>
+      <stop offset="1" stop-color="#6f2c8f"/>
+    </linearGradient>
+    <linearGradient id="floodWater" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#2f89a8"/>
+      <stop offset="0.52" stop-color="#7dc6cf"/>
+      <stop offset="1" stop-color="#6f2c8f"/>
+    </linearGradient>
+    <linearGradient id="foam" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c7eef2"/>
+    </linearGradient>
+    <filter id="softHazardShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#17476a" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="520" height="280" rx="28" fill="url(#skyHazard)" opacity="0.8"/>
+
+  <g opacity="0.92">
+    <path d="M44 72 C58 48 90 44 108 60 C124 32 170 30 190 60 C214 50 246 60 252 84 C258 108 238 124 208 124 L72 124 C42 124 28 98 44 72 Z" fill="url(#stormCloud)" opacity="0.82"/>
+    <path d="M76 138 L56 178 M112 138 L92 194 M148 138 L126 182 M184 138 L164 204 M220 138 L202 178" stroke="#2f89a8" stroke-width="8" stroke-linecap="round" opacity="0.48"/>
+    <path d="M86 142 L72 168 M130 142 L116 174 M174 142 L160 168 M214 142 L200 172" stroke="#6f2c8f" stroke-width="4" stroke-linecap="round" opacity="0.28"/>
+  </g>
+
+  <path d="M22 226 C86 184 142 174 204 196 C270 220 340 204 400 166 C440 140 474 134 506 154 L506 280 L22 280 Z" fill="#2f89a8" opacity="0.13"/>
+  <path d="M28 246 C94 196 158 184 230 204 C304 226 382 218 500 154 L500 280 L28 280 Z" fill="#6f2c8f" opacity="0.1"/>
+
+  <g filter="url(#softHazardShadow)">
+    <path d="M266 250 C270 174 310 118 372 88 C426 62 478 76 510 112 C464 130 442 178 488 250 Z" fill="url(#deepWave)"/>
+    <path d="M372 88 C438 58 500 86 510 136 C520 190 462 224 398 190 C444 190 466 154 446 124 C428 98 400 88 372 88 Z" fill="url(#foam)" opacity="0.92"/>
+    <path d="M394 88 C442 96 468 130 460 168 C452 204 404 208 356 180 C394 190 424 170 426 140 C428 116 414 100 394 88 Z" fill="#ffffff" opacity="0.5"/>
+    <path d="M274 230 C322 198 374 198 432 222 C456 232 482 228 506 214" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" opacity="0.7"/>
+    <path d="M316 200 C352 174 398 166 442 184" fill="none" stroke="#c7eef2" stroke-width="8" stroke-linecap="round" opacity="0.72"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M44 202 L82 164 L118 202 Z" fill="#d4e8eb" opacity="0.9"/>
+    <path d="M100 202 L146 144 L198 202 Z" fill="#b8d9df" opacity="0.84"/>
+    <path d="M34 208 C78 188 122 188 170 204 C214 220 250 212 286 196 L304 236 C220 260 114 250 34 230 Z" fill="url(#floodWater)" opacity="0.72"/>
+    <path d="M56 218 C104 204 148 210 188 224 C226 238 262 228 296 210" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.5"/>
+    <path d="M76 166 L76 204 M108 156 L108 210 M142 164 L142 214 M176 176 L176 220" stroke="#17476a" stroke-width="5" stroke-linecap="round" opacity="0.28"/>
+  </g>
+
+  <g transform="translate(230 206) rotate(-8)" opacity="0.88">
+    <path d="M0 36 L178 36" stroke="#a5792a" stroke-width="12" stroke-linecap="round"/>
+    <path d="M12 28 L44 8 L76 28 M76 28 L108 8 L140 28 M140 28 L172 8 L204 28" fill="none" stroke="#a5792a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="0.86"/>
+    <path d="M18 44 C54 30 92 34 130 48 C160 60 184 52 204 42" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.58"/>
+  </g>
+
+  <g fill="#ffffff" opacity="0.88">
+    <circle cx="336" cy="76" r="9"/>
+    <circle cx="366" cy="84" r="6"/>
+    <circle cx="458" cy="122" r="7"/>
+    <circle cx="312" cy="214" r="7"/>
+    <circle cx="350" cy="222" r="5"/>
+  </g>
+  <path d="M52 246 C112 224 176 226 238 242 C306 260 384 250 486 214" fill="none" stroke="#17476a" stroke-width="4" stroke-linecap="round" opacity="0.16"/>
+</svg>

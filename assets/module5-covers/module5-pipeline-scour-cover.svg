@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Submarine pipeline local scour</title>
+  <desc id="desc">A stylized submarine pipeline above a local scour pit under current and wave action.</desc>
+  <rect width="960" height="520" fill="#f6f0f8"/>
+  <rect width="170" height="520" fill="#174f73"/>
+  <rect x="170" width="260" height="520" fill="#8bd0c4"/>
+  <rect x="430" width="280" height="520" fill="#fff1c9"/>
+  <rect x="710" width="250" height="520" fill="#eadfee"/>
+
+  <path d="M0 122 C130 112 230 140 350 126 C500 108 650 128 960 105 L960 0 L0 0 Z" fill="#e9f8fc" opacity=".9"/>
+  <path d="M0 190 C110 178 210 195 320 184 C500 166 640 190 960 172 L960 318 L0 318 Z" fill="#1295c9"/>
+  <path d="M0 222 C120 210 232 226 355 216 C532 201 652 219 960 203" fill="none" stroke="#fff" stroke-width="4" opacity=".7"/>
+  <path d="M0 263 C110 246 240 268 355 250 C516 226 650 262 960 236" fill="none" stroke="#d8f5ff" stroke-width="5" opacity=".7"/>
+
+  <path d="M0 318 L360 318 C418 318 459 294 504 281 C558 264 592 267 639 292 C679 314 727 318 960 318 L960 520 L0 520 Z" fill="#f3bc8e"/>
+  <path d="M382 318 C428 317 465 291 512 279 C559 267 591 267 632 293 C674 318 706 318 760 318 C716 341 676 353 632 357 C568 363 515 354 472 338 C439 326 412 320 382 318 Z" fill="#1b83b8"/>
+  <path d="M405 318 C450 319 477 300 515 292 C556 283 588 285 623 306 C653 324 682 326 724 320" fill="none" stroke="#0e5b83" stroke-width="5" opacity=".6"/>
+
+  <g transform="translate(493 252)">
+    <circle r="47" fill="#f7f4ef" stroke="#17384c" stroke-width="8"/>
+    <circle r="25" fill="#fff" opacity=".45"/>
+    <text x="65" y="9" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#17384c">D</text>
+    <line x1="50" y1="-8" x2="92" y2="-8" stroke="#17384c" stroke-width="4"/>
+    <line x1="50" y1="18" x2="92" y2="18" stroke="#17384c" stroke-width="4"/>
+  </g>
+
+  <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".9">
+    <path d="M84 158 H240"/>
+    <path d="M122 188 H310"/>
+    <path d="M76 238 H250"/>
+  </g>
+  <g fill="#ffffff">
+    <path d="M240 158 l-22 -14 v28z"/>
+    <path d="M310 188 l-22 -14 v28z"/>
+    <path d="M250 238 l-22 -14 v28z"/>
+  </g>
+
+  <g opacity=".95">
+    <line x1="493" y1="302" x2="493" y2="318" stroke="#6f2c8f" stroke-width="4"/>
+    <path d="M480 318 h26" stroke="#6f2c8f" stroke-width="4"/>
+    <text x="513" y="317" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6f2c8f">e</text>
+    <line x1="415" y1="318" x2="415" y2="357" stroke="#6f2c8f" stroke-width="4"/>
+    <path d="M402 357 h26" stroke="#6f2c8f" stroke-width="4"/>
+    <text x="435" y="350" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#6f2c8f">d</text>
+  </g>
+
+  <g fill="#174f73" opacity=".2">
+    <circle cx="804" cy="376" r="5"/>
+    <circle cx="846" cy="392" r="4"/>
+    <circle cx="892" cy="360" r="5"/>
+    <circle cx="750" cy="420" r="4"/>
+    <circle cx="665" cy="404" r="3"/>
+  </g>
+</svg>

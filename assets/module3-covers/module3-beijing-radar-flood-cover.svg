@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Beijing rainstorm-induced flood resilience</title>
+  <desc id="desc">A stylized illustration of multi-radar networking, rainstorm cells, mountain flash flood pathways, and early warning response.</desc>
+  <rect width="960" height="520" fill="#f6f0f8"/>
+  <rect width="150" height="520" fill="#174f73"/>
+  <rect x="150" width="250" height="520" fill="#8bd0c4"/>
+  <rect x="400" width="230" height="520" fill="#efe4f3"/>
+  <rect x="630" width="330" height="520" fill="#fff1c9"/>
+
+  <path d="M0 360 C126 335 212 366 320 336 C438 304 522 355 642 322 C760 290 835 316 960 286 L960 520 L0 520 Z" fill="#f3bc8e"/>
+  <path d="M0 374 C132 348 220 376 338 346 C456 316 530 370 650 336 C770 302 840 328 960 300" fill="none" stroke="#1295c9" stroke-width="20" opacity=".78"/>
+  <path d="M0 374 C132 348 220 376 338 346 C456 316 530 370 650 336 C770 302 840 328 960 300" fill="none" stroke="#ffffff" stroke-width="4" opacity=".86"/>
+
+  <g opacity=".26" stroke="#174f73" stroke-width="2">
+    <path d="M190 80H925M190 140H925M190 200H925M190 260H925M190 320H925"/>
+    <path d="M240 58V406M300 58V406M360 58V406M420 58V406M480 58V406M540 58V406M600 58V406M660 58V406M720 58V406M780 58V406M840 58V406"/>
+  </g>
+
+  <g transform="translate(240 150)">
+    <circle r="46" fill="#fff" stroke="#6f2c8f" stroke-width="8"/>
+    <circle r="8" fill="#6f2c8f"/>
+    <path d="M0 0 L78 -34" stroke="#6f2c8f" stroke-width="7" stroke-linecap="round"/>
+    <path d="M0 0 A100 100 0 0 1 92 62" fill="none" stroke="#6f2c8f" stroke-width="5" opacity=".42"/>
+    <path d="M0 0 A148 148 0 0 1 130 92" fill="none" stroke="#6f2c8f" stroke-width="4" opacity=".28"/>
+    <rect x="-19" y="48" width="38" height="70" rx="9" fill="#174f73"/>
+  </g>
+  <g transform="translate(338 236) scale(.78)">
+    <circle r="42" fill="#fff" stroke="#6f2c8f" stroke-width="8"/>
+    <circle r="7" fill="#6f2c8f"/>
+    <path d="M0 0 L70 -28" stroke="#6f2c8f" stroke-width="7" stroke-linecap="round"/>
+    <path d="M0 0 A96 96 0 0 1 84 54" fill="none" stroke="#6f2c8f" stroke-width="5" opacity=".42"/>
+    <rect x="-16" y="43" width="32" height="62" rx="8" fill="#174f73"/>
+  </g>
+  <g transform="translate(210 284) scale(.64)">
+    <circle r="42" fill="#fff" stroke="#6f2c8f" stroke-width="8"/>
+    <circle r="7" fill="#6f2c8f"/>
+    <path d="M0 0 L70 -28" stroke="#6f2c8f" stroke-width="7" stroke-linecap="round"/>
+    <path d="M0 0 A96 96 0 0 1 84 54" fill="none" stroke="#6f2c8f" stroke-width="5" opacity=".42"/>
+    <rect x="-16" y="43" width="32" height="62" rx="8" fill="#174f73"/>
+  </g>
+
+  <g fill="none" stroke="#6f2c8f" stroke-width="5" stroke-dasharray="10 10" opacity=".72">
+    <path d="M240 150 C345 88 454 86 560 132"/>
+    <path d="M338 236 C454 180 560 178 676 236"/>
+    <path d="M210 284 C344 310 470 304 612 266"/>
+  </g>
+
+  <g fill="#ffffff" stroke="#7a62a8" stroke-width="4">
+    <path d="M520 108c-8-31-52-38-73-16-22-26-72-13-78 22-30 1-52 20-52 46h268c6-31-25-53-65-52z"/>
+    <path d="M676 80c-5-22-38-27-54-12-17-20-55-10-59 16-22 1-39 16-39 35h200c3-23-20-39-48-39z" opacity=".88"/>
+  </g>
+  <g stroke="#1295c9" stroke-width="5" stroke-linecap="round" opacity=".82">
+    <path d="M400 180v38M446 178v48M492 176v42M538 178v52M584 176v40"/>
+    <path d="M630 148v42M674 146v52M718 148v44"/>
+  </g>
+  <path d="M430 188 C490 206 540 236 596 286" fill="none" stroke="#6f2c8f" stroke-width="6" stroke-dasharray="10 10"/>
+
+  <g transform="translate(548 286)">
+    <path d="M0 56 L78 -20 L138 54 L192 0 L262 88 L-20 88 Z" fill="#7daa66" stroke="#174f73" stroke-width="4"/>
+    <path d="M-16 88 C42 60 88 66 140 48 C190 30 230 42 272 22" fill="none" stroke="#ffffff" stroke-width="6" opacity=".8"/>
+    <path d="M14 82 C70 54 88 64 126 42 C165 18 198 40 234 8" fill="none" stroke="#1295c9" stroke-width="9" opacity=".78"/>
+    <path d="M14 82 C70 54 88 64 126 42 C165 18 198 40 234 8" fill="none" stroke="#ffffff" stroke-width="3" opacity=".9"/>
+    <circle cx="160" cy="38" r="18" fill="#f07f2f" stroke="#174f73" stroke-width="4"/>
+    <path d="M150 38h20M160 28v20" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(806 118)">
+    <path d="M0 0 l42 76 h-84z" fill="#f07f2f" stroke="#174f73" stroke-width="5"/>
+    <text x="0" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="900" fill="#fff">!</text>
+    <path d="M-64 104 C-24 90 18 94 58 78" fill="none" stroke="#6f2c8f" stroke-width="5" stroke-dasharray="9 8"/>
+  </g>
+
+  <g transform="translate(690 392)">
+    <rect x="-38" y="-34" width="78" height="52" rx="10" fill="#174f73"/>
+    <rect x="-26" y="-22" width="54" height="30" rx="5" fill="#8bd0c4"/>
+    <path d="M-48 30 H52" stroke="#174f73" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-26 42 H30" stroke="#6f2c8f" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+</svg>

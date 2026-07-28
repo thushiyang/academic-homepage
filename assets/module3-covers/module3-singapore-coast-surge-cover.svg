@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Singapore Malacca Strait coastal flood resilience</title>
+  <desc id="desc">A stylized coastal flood resilience cover with storm surge, sea-level rise, Malacca Strait coastline, and coastal protection systems.</desc>
+  <rect width="960" height="520" fill="#f6f0f8"/>
+  <rect width="150" height="520" fill="#174f73"/>
+  <rect x="150" width="250" height="520" fill="#8bd0c4"/>
+  <rect x="400" width="230" height="520" fill="#efe4f3"/>
+  <rect x="630" width="330" height="520" fill="#fff1c9"/>
+  <g opacity=".22" stroke="#174f73" stroke-width="2">
+    <path d="M190 80H925M190 140H925M190 200H925M190 260H925M190 320H925M190 380H925"/>
+    <path d="M240 58V430M300 58V430M360 58V430M420 58V430M480 58V430M540 58V430M600 58V430M660 58V430M720 58V430M780 58V430M840 58V430"/>
+  </g>
+  <path d="M0 340 C118 310 215 344 330 318 C448 292 548 326 662 292 C780 258 850 286 960 250 L960 520 L0 520 Z" fill="#2f9cc8" opacity=".86"/>
+  <path d="M0 374 C118 342 224 378 336 348 C454 316 545 356 662 322 C790 284 855 318 960 282" fill="none" stroke="#ffffff" stroke-width="5" opacity=".8"/>
+  <path d="M0 414 C120 382 222 418 338 388 C456 356 550 394 668 360 C790 326 860 354 960 320" fill="none" stroke="#ffffff" stroke-width="4" opacity=".65"/>
+  <path d="M526 222 C596 186 668 190 730 226 C790 260 858 254 930 214 L960 214 L960 520 L532 520 Z" fill="#7daa66" stroke="#174f73" stroke-width="4"/>
+  <path d="M536 244 C606 218 670 222 730 254 C792 286 852 282 918 246" fill="none" stroke="#fff1c9" stroke-width="24" opacity=".9"/>
+  <path d="M536 244 C606 218 670 222 730 254 C792 286 852 282 918 246" fill="none" stroke="#174f73" stroke-width="4" stroke-dasharray="12 10"/>
+  <g transform="translate(650 278)">
+    <rect x="-68" y="-28" width="136" height="56" rx="12" fill="#fff" stroke="#6f2c8f" stroke-width="5"/>
+    <path d="M-52 4 H52" stroke="#174f73" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-45 16 H44" stroke="#8bd0c4" stroke-width="6" stroke-linecap="round"/>
+    <path d="M-44 -6 H44" stroke="#f07f2f" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(760 206)">
+    <path d="M0 0 l38 70 h-76z" fill="#f07f2f" stroke="#174f73" stroke-width="5"/>
+    <text x="0" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="900" fill="#fff">!</text>
+  </g>
+  <g fill="none" stroke="#6f2c8f" stroke-width="6" stroke-dasharray="10 10" opacity=".7">
+    <path d="M260 124 C360 86 470 94 570 144"/>
+    <path d="M260 180 C360 146 476 154 594 216"/>
+  </g>
+  <g fill="#fff" stroke="#7a62a8" stroke-width="4">
+    <path d="M336 80c-6-25-42-31-60-14-19-22-60-10-66 18-25 1-44 18-44 40h224c4-27-23-45-54-44z"/>
+    <path d="M504 106c-6-28-48-34-66-15-21-24-66-11-72 21-28 1-49 20-49 44h252c5-29-25-50-65-50z" opacity=".92"/>
+  </g>
+  <g stroke="#1295c9" stroke-width="5" stroke-linecap="round" opacity=".82">
+    <path d="M374 148v40M418 148v52M462 148v44M506 148v56"/>
+  </g>
+  <path d="M360 220 C430 252 500 252 568 286" fill="none" stroke="#6f2c8f" stroke-width="6"/>
+  <g transform="translate(354 352)">
+    <rect x="-48" y="-34" width="96" height="66" rx="12" fill="#174f73"/>
+    <rect x="-32" y="-18" width="64" height="34" rx="5" fill="#8bd0c4"/>
+    <path d="M-58 44 H58" stroke="#174f73" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

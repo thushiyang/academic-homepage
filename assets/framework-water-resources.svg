@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" role="img" aria-labelledby="title desc">
+  <title id="title">Water resources illustration</title>
+  <desc id="desc">A stylized landscape with mountains, reservoir, river, and boat.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7fbfc"/>
+      <stop offset="0.55" stop-color="#e8f4f6"/>
+      <stop offset="1" stop-color="#f6eef8"/>
+    </linearGradient>
+    <linearGradient id="mountainA" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7e5ca6"/>
+      <stop offset="1" stop-color="#2f89a8"/>
+    </linearGradient>
+    <linearGradient id="mountainB" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#3f8f7a"/>
+      <stop offset="1" stop-color="#6f2c8f"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#2f89a8"/>
+      <stop offset="0.52" stop-color="#bde6ed"/>
+      <stop offset="1" stop-color="#6f2c8f"/>
+    </linearGradient>
+    <linearGradient id="boat" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#c7953d"/>
+      <stop offset="1" stop-color="#7e5c3d"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#17476a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="520" height="280" rx="28" fill="url(#sky)" opacity="0.72"/>
+  <circle cx="403" cy="58" r="30" fill="#ddb35c" opacity="0.72"/>
+  <circle cx="403" cy="58" r="48" fill="#ddb35c" opacity="0.16"/>
+  <path d="M28 202 C104 164 150 92 198 152 C232 90 290 52 350 146 C394 112 440 116 492 178 L492 232 L28 232 Z" fill="#d9eef1"/>
+  <path d="M44 206 L158 74 L266 206 Z" fill="url(#mountainA)" opacity="0.86"/>
+  <path d="M164 206 L294 48 L448 206 Z" fill="url(#mountainB)" opacity="0.78"/>
+  <path d="M151 92 L158 74 L175 94 L166 92 L158 106 Z" fill="#f8fbfc" opacity="0.72"/>
+  <path d="M282 64 L294 48 L314 76 L298 71 L284 86 Z" fill="#f8fbfc" opacity="0.76"/>
+  <path d="M70 174 C124 154 198 152 260 166 C336 184 404 168 464 150 L486 212 C392 250 176 248 42 216 Z" fill="url(#water)" opacity="0.84" filter="url(#softShadow)"/>
+  <path d="M64 194 C128 180 190 184 252 198 C330 216 394 200 470 178" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+  <path d="M122 220 C180 212 234 218 292 232 C348 246 406 234 456 216" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.42"/>
+  <path d="M94 248 C166 222 218 224 278 250 C338 278 420 254 494 232 L494 280 L26 280 L26 262 C48 258 70 254 94 248 Z" fill="#2f89a8" opacity="0.18"/>
+  <g transform="translate(156 174) rotate(-4)" filter="url(#softShadow)">
+    <path d="M0 18 L126 18 L104 48 L20 48 Z" fill="url(#boat)"/>
+    <path d="M34 16 L66 0 L96 16 Z" fill="#f4e8c8" opacity="0.9"/>
+    <path d="M66 0 L66 48" stroke="#7e5c3d" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M30 238 C80 220 132 222 182 238" fill="none" stroke="#a5792a" stroke-width="5" stroke-linecap="round" opacity="0.44"/>
+</svg>
