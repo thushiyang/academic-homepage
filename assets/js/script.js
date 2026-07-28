@@ -1,4 +1,4 @@
-const year = document.querySelector("#year");
+﻿const year = document.querySelector("#year");
 
 if (year) {
   year.textContent = new Date().getFullYear();
@@ -232,3 +232,4 @@ carousels.forEach((carousel) => {
 
   updateDots();
 });
+

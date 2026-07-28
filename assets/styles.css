@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #18212a;
   --muted: #5b6773;
   --line: #d9e0e5;
@@ -97,7 +97,7 @@ footer a:hover {
 }
 
 .hero-bg {
-  background-image: url("siww-hero-water-cycle.gif");
+  background-image: url("hero-images/siww-hero-water-cycle.gif");
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -5083,3 +5083,5 @@ canvas {
     min-height: 46px;
   }
 }
+
+

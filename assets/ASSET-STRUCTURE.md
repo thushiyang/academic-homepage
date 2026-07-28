@@ -1,73 +1,39 @@
 ﻿# Asset Structure
 
-This folder is organized by website/page hierarchy rather than by temporary source-material names.
+This folder is organized by website role so the project can be restored and edited from the external drive without guessing where files belong.
 
-## Root-Level Folders
+## Active shared assets
 
-- `group-covers/`: home/profile/group-related cover visuals.
-- `journal-covers/`: publication and journal cover visuals.
-- `module1-covers/` to `module6-covers/`: research module card cover images.
-- `news-source/`: news, awards, events, and institution-logo materials.
-- `project-covers/`: project-page cover visuals. Present in source; published only when referenced.
-- `research-branch-gifs/`: branch-level research animations.
-- `research-details/`: detailed figures used inside research module/card modals.
-- `research-module-gifs/`: module-level research animations.
-- `research-source/`: retained research source/reference materials. Present in source; published only when referenced.
+- `js/` - shared JavaScript used by active HTML pages.
+- `styles.css` - shared stylesheet for the site.
+- `cv/` - downloadable CV files used by the home/contact section.
+- `logos/` - partner, collaborator, and project logos.
+  - `logos/cfi/`
+  - `logos/nus-ccl/`
+  - `logos/prep-aqua/`
+  - `logos/3m-dt/`
+- `hero-images/` - general hero and page-level visual assets.
+- `group-covers/` - publication, project, patent, service, and card-category cover images.
+- `journal-covers/` - journal cover images.
 
-## News Source Structure
+## Research assets
 
-Use the website hierarchy:
+- `module1-covers/` to `module6-covers/` - cover images for research modules.
+- `research-module-gifs/` - animated module overview images.
+- `research-branch-gifs/` - branch-level and home research animations.
+- `research-framework/` - 3M-DT / water-resources / water-hazards framework graphics.
+- `research-details/` - figures and equation images used inside research cards, named by module/card/figure.
+- `research-source/` - research source or preview materials not directly used as final card figures.
 
-- `news-source/awards/<award-or-program-name>/`
-- `news-source/events/<event-name>/`
-- `news-source/institutions/<institution-or-logo-name>/`
+## News and source materials
 
-Examples:
+- `news-source/awards/` - award source images grouped by award.
+- `news-source/events/` - event and meeting source images grouped by event.
+- `news-source/institutions/` - institution logos and related source materials.
+- `news-source/raw-pages/` - archived HTML source pages kept for traceability, not active website pages.
 
-- `news-source/awards/forbes-u30-2023/`
-- `news-source/awards/tsinghua-shuimu-scholar/`
-- `news-source/events/zijin-salon-2022/`
-- `news-source/institutions/tju-jgxy-logo/`
+## Archives
 
-## Research Details Structure
+- `_archive/script-backups/` - old script snapshots retained for rollback/reference.
 
-Use module and card hierarchy:
-
-- `research-details/module<module-number>-card<card-number>-<topic>/`
-
-Example:
-
-- `research-details/module1-card1-acoustic-theory/`
-
-## Naming Rule
-
-New folders should describe where the asset belongs on the website, not where the raw material came from.
-
-Preferred:
-
-```text
-research-details/module2-card1-ecological-replenishment/
-news-source/awards/forbes-u30-2023/
-```
-
-Avoid root-level temporary folders such as:
-
-```text
-acoustic-theory/
-forbes-u30-2023/
-tsinghua-shuimu/
-```
-
-## Publishing Rule
-
-Edit and organize assets first in:
-
-```text
-I:\00NUS_misc\AcademicHP\site-source\assets
-```
-
-Then sync the required changed assets and HTML/CSS references into:
-
-```text
-I:\00NUS_misc\AcademicHP\github-pages-dist\assets
-```
+Root-level files in `assets/` should be kept minimal: normally only `styles.css` and this `ASSET-STRUCTURE.md` file remain here.
