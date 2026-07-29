@@ -3620,9 +3620,7 @@ footer {
   color: var(--accent-strong);
   font-size: clamp(1.5rem, 2.6vw, 2.35rem);
   line-height: 1.05;
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 .prep-aqua-kicker {
@@ -3652,9 +3650,7 @@ footer {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.7;
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-word;
+  text-align: left;
 }
 
 .prep-aqua-launch-actions {
