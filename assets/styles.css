@@ -3621,6 +3621,19 @@ footer {
   line-height: 1.05;
 }
 
+.prep-aqua-status {
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid rgba(111, 44, 143, 0.28);
+  border-radius: 999px;
+  background: rgba(239, 229, 243, 0.72);
+  color: var(--accent-strong);
+  font-size: 0.7rem;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
 .prep-aqua-launch-copy p:not(.eyebrow) {
   width: 100%;
   max-width: none;
