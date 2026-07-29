@@ -305,9 +305,9 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
+  margin-inline: clamp(20px, 7vw, 88px);
   background: var(--line);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border: 1px solid var(--line);
 }
 
 .profile-strip > div {
@@ -366,7 +366,8 @@ footer {
 }
 
 .section-heading.fluid-heading h2 {
-  max-width: min(100%, calc(100vw - clamp(64px, 8vw, 160px)));
+  max-width: none;
+  font-size: clamp(2.35rem, 3vw, 3.05rem);
 }
 
 .fluid-copy,
@@ -377,9 +378,11 @@ footer {
   max-width: min(100%, calc(100vw - clamp(64px, 8vw, 160px)));
 }
 
-.contact-section .fluid-copy {
+.contact-section .fluid-copy,
+.contact-section .institution-note.fluid-copy {
   width: 100%;
   max-width: none;
+  text-align: left;
 }
 
 .section-heading.split.no-side-copy {
@@ -4497,6 +4500,10 @@ footer p {
 }
 
 @media (max-width: 720px) {
+  .profile-strip {
+    margin-inline: 14px;
+  }
+
   .site-header {
     position: static;
     align-items: flex-start;
@@ -5109,6 +5116,7 @@ canvas {
     min-height: 46px;
   }
 }
+
 
 
 
