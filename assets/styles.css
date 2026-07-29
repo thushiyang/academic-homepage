@@ -4574,6 +4574,17 @@ footer p {
     grid-template-columns: 1fr;
   }
 
+  .award-groups {
+    gap: 1px;
+    border: 1px solid var(--line);
+    background: var(--line);
+  }
+
+  .award-group {
+    padding: 24px;
+    background: var(--paper);
+  }
+
   .framework-logo-wrap {
     min-height: 180px;
   }
