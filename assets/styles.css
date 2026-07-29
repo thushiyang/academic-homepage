@@ -3622,6 +3622,13 @@ footer {
   text-align: right;
 }
 
+.prep-aqua-kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
 .prep-aqua-status {
   width: fit-content;
   padding: 4px 8px;
