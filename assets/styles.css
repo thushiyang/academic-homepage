@@ -360,17 +360,26 @@ footer {
 }
 
 
-.fluid-heading {
-  max-width: min(1120px, calc(100vw - clamp(40px, 14vw, 176px)));
+.section-heading.fluid-heading {
+  width: 100%;
+  max-width: none;
 }
 
-.fluid-heading h2 {
-  max-width: 100%;
+.section-heading.fluid-heading h2 {
+  max-width: min(100%, calc(100vw - clamp(64px, 8vw, 160px)));
 }
 
-.fluid-copy {
-  width: min(100%, 1120px);
-  max-width: calc(100vw - clamp(40px, 14vw, 176px));
+.fluid-copy,
+.wide-text.fluid-copy,
+.institution-note.fluid-copy,
+.research-page-hero .fluid-copy {
+  width: 100%;
+  max-width: min(100%, calc(100vw - clamp(64px, 8vw, 160px)));
+}
+
+.contact-section .fluid-copy {
+  width: 100%;
+  max-width: none;
 }
 
 .section-heading.split.no-side-copy {
@@ -5100,6 +5109,7 @@ canvas {
     min-height: 46px;
   }
 }
+
 
 
 
