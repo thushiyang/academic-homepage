@@ -1,5 +1,6 @@
 ﻿window.SITE_FEATURES = {
-  // Turn this on when the PREP-AQUA module is ready to be shown publicly.
-  prepAqua: true
+  // Control the two PREP-AQUA surfaces independently.
+  prepAquaHome: true,
+  prepAquaPatentsSoftware: true
 };
 
