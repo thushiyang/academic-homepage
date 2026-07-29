@@ -6,6 +6,22 @@ if (year) {
 
 const siteFeatures = window.SITE_FEATURES || {};
 
+if (siteFeatures.maintenanceMode) {
+  document.title = "Yang Shi | Website Maintenance";
+  document.body.className = "maintenance-active";
+  document.body.innerHTML = `
+    <main class="maintenance-screen">
+      <section class="maintenance-card" aria-labelledby="maintenance-title">
+        <p class="maintenance-eyebrow">Yang Shi | Academic Homepage</p>
+        <span class="maintenance-status">Website under maintenance</span>
+        <h1 id="maintenance-title">Updates are currently in progress.</h1>
+        <p class="maintenance-copy">This academic website is being updated and will be available again shortly.</p>
+        <p class="maintenance-contact">For enquiries, please contact <a href="mailto:yangshi@nus.edu.sg">yangshi@nus.edu.sg</a>.</p>
+      </section>
+    </main>
+  `;
+}
+
 document.querySelectorAll("[data-feature]").forEach((element) => {
   const featureName = element.dataset.feature;
   const enabled = Boolean(siteFeatures[featureName]);
