@@ -14,6 +14,13 @@ document.querySelectorAll("[data-feature]").forEach((element) => {
   element.classList.toggle("feature-gated", !enabled);
 });
 
+if (window.location.hash) {
+  const hashTarget = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+  if (hashTarget && !hashTarget.hidden) {
+    window.requestAnimationFrame(() => hashTarget.scrollIntoView({ block: "start" }));
+  }
+}
+
 document.querySelectorAll('a[aria-disabled="true"]').forEach((link) => {
   link.addEventListener("click", (event) => event.preventDefault());
 });
