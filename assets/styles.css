@@ -305,6 +305,16 @@ h3 {
   transform: translateY(-1px);
 }
 
+.button[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.button[aria-disabled="true"]:hover {
+  transform: none;
+}
+
 .profile-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
