@@ -1206,6 +1206,21 @@ footer {
   color: var(--muted);
 }
 
+.result-card .card-status {
+  align-self: flex-start;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 4px 8px;
+  border: 1px solid rgba(111, 44, 143, 0.28);
+  border-radius: 999px;
+  background: rgba(239, 229, 243, 0.72);
+  color: var(--accent-strong);
+  font-size: 0.7rem;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
 .result-card a {
   margin-top: 14px;
   color: var(--accent-strong);
