@@ -130,6 +130,10 @@ footer a:hover {
   max-width: 760px;
   padding: clamp(64px, 10vw, 118px) clamp(20px, 7vw, 88px);
 }
+.hero-content h1 {
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
+  white-space: nowrap;
+}
 
 .eyebrow,
 .label,
@@ -5116,6 +5120,7 @@ canvas {
     min-height: 46px;
   }
 }
+
 
 
 
