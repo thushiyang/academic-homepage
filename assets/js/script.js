@@ -5,19 +5,32 @@ if (year) {
 }
 
 const siteFeatures = window.SITE_FEATURES || {};
+const maintenanceMode =
+  siteFeatures.maintenanceMode === true ? "maintenance" : siteFeatures.maintenanceMode || "open";
+const isHomePage = /\/(?:index\.html)?$/.test(window.location.pathname);
+const maintenanceNotice = `
+  <section class="maintenance-card" aria-labelledby="maintenance-title">
+    <p class="maintenance-eyebrow">Yang Shi | Academic Homepage</p>
+    <span class="maintenance-status">Website under maintenance</span>
+    <h1 id="maintenance-title">Updates are currently in progress.</h1>
+    <p class="maintenance-copy">This academic website is being updated and will be available again shortly.</p>
+    <p class="maintenance-contact">For enquiries, please contact <a href="mailto:yangshi@nus.edu.sg">yangshi@nus.edu.sg</a>.</p>
+  </section>
+`;
 
-if (siteFeatures.maintenanceMode) {
+if (maintenanceMode === "overlay" && isHomePage) {
+  document.title = "Yang Shi | Website Maintenance";
+  document.body.classList.add("maintenance-overlay-active");
+  document.body.insertAdjacentHTML(
+    "beforeend",
+    `<div class="maintenance-overlay" role="dialog" aria-modal="true">${maintenanceNotice}</div>`
+  );
+} else if (maintenanceMode === "maintenance" || maintenanceMode === "overlay") {
   document.title = "Yang Shi | Website Maintenance";
   document.body.className = "maintenance-active";
   document.body.innerHTML = `
     <main class="maintenance-screen">
-      <section class="maintenance-card" aria-labelledby="maintenance-title">
-        <p class="maintenance-eyebrow">Yang Shi | Academic Homepage</p>
-        <span class="maintenance-status">Website under maintenance</span>
-        <h1 id="maintenance-title">Updates are currently in progress.</h1>
-        <p class="maintenance-copy">This academic website is being updated and will be available again shortly.</p>
-        <p class="maintenance-contact">For enquiries, please contact <a href="mailto:yangshi@nus.edu.sg">yangshi@nus.edu.sg</a>.</p>
-      </section>
+      ${maintenanceNotice}
     </main>
   `;
 }
