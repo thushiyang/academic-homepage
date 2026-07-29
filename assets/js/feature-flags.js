@@ -1,7 +1,7 @@
 ﻿window.SITE_FEATURES = {
-  // "open" restores the site, "maintenance" shows a full maintenance page,
-  // and "overlay" keeps the Home page visible behind a maintenance notice.
-  maintenanceMode: "overlay",
+  // Use "open" for the live website and "maintenance" for the default
+  // Home-page overlay. Non-Home pages remain covered by the full notice.
+  maintenanceMode: "maintenance",
   // Control the two PREP-AQUA surfaces independently.
   prepAquaHome: false,
   prepAquaProjects: true
