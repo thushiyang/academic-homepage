@@ -518,6 +518,10 @@ footer {
   background: var(--soft);
 }
 
+.research-heading-stack .fluid-copy {
+  margin-top: -4px;
+  max-width: min(100%, 1180px);
+}
 .research-carousel {
   margin-top: 28px;
 }
@@ -5121,10 +5125,4 @@ canvas {
     min-height: 46px;
   }
 }
-
-
-
-
-
-
 
