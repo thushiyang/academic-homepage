@@ -4961,7 +4961,24 @@ canvas {
     top: auto;
   }
 
+  .research-module-aside {
+    display: contents;
+  }
+
+  .research-module-visual {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .research-module-body {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
   .module-guide {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 0;
     padding: 12px;
   }
 
