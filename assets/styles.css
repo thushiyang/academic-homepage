@@ -4442,7 +4442,8 @@ li + li {
 .contact-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 410px);
-  gap: 36px;
+  column-gap: clamp(56px, 6vw, 104px);
+  row-gap: 36px;
   align-items: center;
   background:
     radial-gradient(circle at 86% 16%, rgba(111,44,143,0.1), transparent 28%),
@@ -5120,6 +5121,7 @@ canvas {
     min-height: 46px;
   }
 }
+
 
 
 
