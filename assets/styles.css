@@ -342,6 +342,7 @@ h3 {
 
 button.button {
   font: inherit;
+  font-weight: 750;
   cursor: pointer;
 }
 
