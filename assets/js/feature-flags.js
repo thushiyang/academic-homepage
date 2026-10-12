@@ -4,6 +4,6 @@
   maintenanceMode: "open",
   // Control the two PREP-AQUA surfaces independently.
   prepAquaHome: false,
-  prepAquaProjects: true
+  prepAquaProjects: false
 };
 
