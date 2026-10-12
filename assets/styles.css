@@ -3991,6 +3991,22 @@ footer {
   box-shadow: 0 24px 54px rgba(23, 34, 44, 0.09);
 }
 
+.project-highlights {
+  margin-bottom: 24px;
+}
+
+.project-highlights-heading {
+  margin-bottom: 12px;
+}
+
+.project-highlights-heading .eyebrow {
+  margin: 0;
+}
+
+.project-highlights .prep-aqua-launch:last-child {
+  margin-bottom: 0;
+}
+
 .prep-aqua-launch-copy {
   display: grid;
   align-content: center;
@@ -4063,6 +4079,40 @@ footer {
   width: min(100%, 420px);
   height: auto;
   justify-self: center;
+}
+
+.coawst-scs-wordmark {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  justify-items: center;
+  min-height: 112px;
+  padding: 18px;
+  border: 1px solid rgba(47, 137, 168, 0.18);
+  background:
+    linear-gradient(135deg, rgba(9, 32, 49, 0.98), rgba(18, 67, 86, 0.94)),
+    var(--ink);
+  text-align: center;
+}
+
+.coawst-scs-wordmark strong {
+  color: #f6fbfd;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.coawst-scs-wordmark strong span {
+  color: #db9475;
+}
+
+.coawst-scs-wordmark small {
+  color: rgba(229, 242, 247, 0.78);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .prep-aqua-module-map {
