@@ -182,6 +182,27 @@ const closeModal = (modal) => {
   document.body.classList.remove("modal-open");
 };
 
+document.querySelectorAll("[data-love-family-entry]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const modal = document.getElementById("beyond-research-modal");
+
+    if (!modal) {
+      return;
+    }
+
+    event.preventDefault();
+    const confirmLink = modal.querySelector("[data-love-family-confirm]");
+
+    if (confirmLink) {
+      confirmLink.href = link.href;
+    }
+
+    modal.classList.remove("is-hidden");
+    document.body.classList.add("modal-open");
+    window.requestAnimationFrame(() => confirmLink?.focus());
+  });
+});
+
 document.querySelectorAll("[data-open-modal]").forEach((button) => {
   button.addEventListener("click", () => {
     const modal = document.getElementById(button.dataset.openModal);

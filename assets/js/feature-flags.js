@@ -4,6 +4,9 @@
   maintenanceMode: "open",
   // Control the two PREP-AQUA surfaces independently.
   prepAquaHome: false,
-  prepAquaProjects: false
+  prepAquaProjects: false,
+  // Public doorway to the independent Of Love and Family module.
+  // Its single switch lives in that module's module-status.js file.
+  loveAndFamilyHome: window.LOVE_FAMILY_MODULE?.enabled !== false
 };
 

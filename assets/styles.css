@@ -1725,6 +1725,56 @@ footer {
   cursor: pointer;
 }
 
+.beyond-research-panel {
+  width: min(620px, 100%);
+  padding: clamp(28px, 5vw, 54px);
+  overflow: hidden;
+  border-color: rgba(165, 121, 42, 0.38);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(239, 229, 243, 0.92), transparent 34%),
+    linear-gradient(145deg, #ffffff 0%, #fbf8f2 100%);
+}
+
+.beyond-research-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  float: none;
+  margin: 0;
+}
+
+.beyond-research-panel h2 {
+  max-width: 520px;
+  margin: 8px 0 14px;
+  font-size: clamp(1.8rem, 4vw, 2.65rem);
+  line-height: 1.12;
+}
+
+.beyond-research-panel > p:not(.eyebrow):not(.beyond-research-note) {
+  max-width: 540px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.beyond-research-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.beyond-research-actions .button {
+  min-height: 46px;
+}
+
+.beyond-research-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .cv-modal {
   padding: clamp(10px, 2vw, 24px);
 }
