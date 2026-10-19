@@ -92,6 +92,10 @@ const translations = {
     galleryLightboxClose: "Close large photo",
     galleryLightboxPrevious: "Previous photo",
     galleryLightboxNext: "Next photo",
+    modalViewWindow: "View: Window",
+    modalViewImmersive: "View: Immersive",
+    modalViewSwitchToWindow: "Switch to window view",
+    modalViewSwitchToImmersive: "Switch to immersive view",
     photo1Title: "Wedding Day",
     photo2Title: "The Ring Exchange",
     photo3Title: "New Year Reunion",
@@ -489,6 +493,10 @@ const translations = {
     galleryLightboxClose: "关闭大图",
     galleryLightboxPrevious: "上一张照片",
     galleryLightboxNext: "下一张照片",
+    modalViewWindow: "视图：窗口",
+    modalViewImmersive: "视图：沉浸",
+    modalViewSwitchToWindow: "切换到窗口模式",
+    modalViewSwitchToImmersive: "切换到沉浸模式",
     photo1Title: "婚礼当天",
     photo2Title: "交换戒指",
     photo3Title: "新春团聚",
@@ -802,6 +810,44 @@ const translations = {
   }
 };
 
+const modalViewStorageKey = "love-and-family-modal-view";
+let modalViewMode = "window";
+try {
+  modalViewMode = localStorage.getItem(modalViewStorageKey) === "immersive" ? "immersive" : "window";
+} catch (error) {
+  modalViewMode = "window";
+}
+
+const refreshModalViewControls = () => {
+  const language = document.documentElement.lang === "zh-CN" ? "zh" : "en";
+  const copy = translations[language];
+  const isImmersive = modalViewMode === "immersive";
+
+  document.querySelectorAll("[data-modal-surface]").forEach((surface) => {
+    surface.dataset.viewMode = modalViewMode;
+  });
+  document.querySelectorAll("[data-modal-view-toggle]").forEach((button) => {
+    const label = button.querySelector("[data-modal-view-label]");
+    const icon = button.querySelector(".modal-view-toggle-icon");
+    button.setAttribute("aria-pressed", String(isImmersive));
+    button.setAttribute("aria-label", isImmersive ? copy.modalViewSwitchToWindow : copy.modalViewSwitchToImmersive);
+    if (label) label.textContent = isImmersive ? copy.modalViewImmersive : copy.modalViewWindow;
+    if (icon) icon.textContent = isImmersive ? "□" : "▣";
+  });
+};
+
+document.addEventListener("click", (event) => {
+  const toggle = event.target.closest("[data-modal-view-toggle]");
+  if (!toggle) return;
+  modalViewMode = modalViewMode === "window" ? "immersive" : "window";
+  try {
+    localStorage.setItem(modalViewStorageKey, modalViewMode);
+  } catch (error) {
+    // The view switch still works when browser storage is unavailable.
+  }
+  refreshModalViewControls();
+});
+
 const setLanguage = (language) => {
   const lang = language === "zh" ? "zh" : "en";
   const copy = translations[lang];
@@ -837,6 +883,8 @@ const setLanguage = (language) => {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  refreshModalViewControls();
 
   try {
     localStorage.setItem("love-and-family-language", lang);
@@ -1044,6 +1092,7 @@ photoOverviewDialog?.addEventListener("close", () => {
 
 const photoLightboxDialog = document.createElement("dialog");
 photoLightboxDialog.className = "photo-lightbox-dialog";
+photoLightboxDialog.dataset.modalSurface = "";
 photoLightboxDialog.innerHTML = `
   <div class="photo-lightbox-panel">
     <div class="photo-lightbox-stage">
@@ -1055,9 +1104,11 @@ photoLightboxDialog.innerHTML = `
       <strong data-photo-lightbox-title></strong>
       <span data-photo-lightbox-count></span>
     </footer>
+    <button class="modal-view-toggle photo-lightbox-mode-toggle" type="button" data-modal-view-toggle aria-pressed="false"><span class="modal-view-toggle-icon" aria-hidden="true">▣</span><span data-modal-view-label>View: Window</span></button>
     <button class="photo-lightbox-close" type="button" data-i18n-aria="galleryLightboxClose"><span aria-hidden="true">&times;</span></button>
   </div>`;
 document.body.appendChild(photoLightboxDialog);
+refreshModalViewControls();
 
 const photoLightboxImage = photoLightboxDialog.querySelector(".photo-lightbox-image");
 const photoLightboxTitle = photoLightboxDialog.querySelector("[data-photo-lightbox-title]");

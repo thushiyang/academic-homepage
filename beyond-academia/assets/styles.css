@@ -403,4 +403,25 @@ section.nga-class-detail.has-editorial-art.is-open { max-height: none; opacity: 
   .nga-class-detail.has-editorial-art .nga-class-detail-visual { min-height: 290px; }
   .nga-class-detail.has-editorial-art .nga-class-detail-copy { grid-template-columns: 1fr; padding: 27px 22px 30px; }
 }
+
+/* Shared view switch for photo lightboxes and Azeroth class profiles. */
+.modal-view-toggle { position: absolute; z-index: 8; top: 16px; right: 66px; min-height: 36px; padding: 0 12px; display: inline-flex; align-items: center; gap: 7px; border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; color: #fff5df; background: rgba(3,10,17,0.76); box-shadow: 0 8px 22px rgba(0,0,0,0.26); font: 700 0.62rem/1 Arial,"Noto Sans SC",sans-serif; letter-spacing: 0.06em; cursor: pointer; transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.modal-view-toggle:hover, .modal-view-toggle:focus-visible { color: #07131f; background: var(--gold-bright); border-color: var(--gold-bright); outline: none; transform: translateY(-1px); }
+.modal-view-toggle-icon { font-size: 0.9rem; line-height: 1; }
+.photo-lightbox-mode-toggle { top: 18px; right: 72px; }
+
+.photo-lightbox-dialog[data-view-mode="window"] { width: min(1120px, 88vw); height: min(78vh, 760px); }
+.photo-lightbox-dialog[data-view-mode="window"]::backdrop { background: rgba(1,5,10,0.4); backdrop-filter: blur(2px); }
+.photo-lightbox-dialog[data-view-mode="window"] .photo-lightbox-image { max-height: calc(min(78vh, 760px) - 74px); }
+
+section.nga-class-detail[data-view-mode="window"] { padding: 0; background: rgba(1,7,13,0.34); backdrop-filter: blur(2px); }
+section.nga-class-detail[data-view-mode="window"] .nga-class-detail-inner { width: min(1120px, 88vw); height: min(78vh, 760px); max-height: min(78vh, 760px); }
+
+@media (max-width: 620px) {
+  .modal-view-toggle { top: 13px; right: 60px; min-height: 34px; padding: 0 10px; }
+  .modal-view-toggle [data-modal-view-label] { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .photo-lightbox-dialog[data-view-mode="window"] { width: calc(100vw - 24px); height: 78dvh; border: 1px solid rgba(240,203,117,0.4); border-radius: 14px; }
+  .photo-lightbox-dialog[data-view-mode="window"] .photo-lightbox-image { max-height: calc(78dvh - 68px); }
+  section.nga-class-detail[data-view-mode="window"] .nga-class-detail-inner { width: calc(100vw - 24px); height: 78dvh; max-height: 78dvh; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.reveal { opacity: 1; transform: none; transition: none; }.cast-member, .nga-class-detail { transition: none; } }

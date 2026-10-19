@@ -12,7 +12,7 @@
         document.documentElement.classList.add("love-family-withdrawn");
       }
     </script>
-  <link rel="stylesheet" href="assets/styles.css?v=20261019-photo-lightbox-v1" />
+  <link rel="stylesheet" href="assets/styles.css?v=20261019-modal-view-toggle-v1" />
   </head>
   <body>
     <main class="module-withdrawn-screen" aria-labelledby="module-withdrawn-title">
@@ -467,8 +467,9 @@
             <button class="nga-class warlock" type="button" aria-expanded="false" aria-controls="nga-class-detail" data-class-profile="warlock" data-source-url="https://bbs.nga.cn/read.php?tid=19212434" data-symbol-src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" data-detail-src="assets/azeroth/warlock/cover.webp" data-scene-src="assets/azeroth/warlock/scene.webp" data-title-key="classWarlock" data-talent-key="talentWarlock" data-body-key="detailWarlockBody" data-alt-key="detailWarlockAlt" data-scene-alt-key="detailWarlockSceneAlt" data-scene-caption-key="detailWarlockSceneCaption" data-read-key="readWarlockJournal" data-official-key="officialWarlockProfile" data-official-url="https://worldofwarcraft.blizzard.com/en-us/game/classes/warlock"><small>06</small><span class="class-symbol" aria-hidden="true"><img src="https://wow.zamimg.com/images/wow/icons/large/classicon_warlock.jpg" alt="" decoding="async" referrerpolicy="no-referrer" /></span><strong data-i18n="classWarlock">Warlock</strong><span class="class-talent" data-i18n="talentWarlock">Demonology</span></button>
           </div>
         </article>
-        <section class="nga-class-detail" id="nga-class-detail" role="dialog" aria-modal="true" aria-labelledby="nga-class-detail-title" tabindex="-1" hidden>
+        <section class="nga-class-detail" id="nga-class-detail" role="dialog" aria-modal="true" aria-labelledby="nga-class-detail-title" tabindex="-1" data-modal-surface data-view-mode="window" hidden>
           <div class="nga-class-detail-inner">
+            <button class="modal-view-toggle nga-class-detail-mode-toggle" type="button" data-modal-view-toggle aria-pressed="false"><span class="modal-view-toggle-icon" aria-hidden="true">▣</span><span data-modal-view-label>View: Window</span></button>
             <button class="nga-class-detail-close" type="button" aria-label="Close character profile" data-i18n-aria="classDetailClose">×</button>
             <div class="nga-class-detail-visual">
               <span class="nga-class-detail-glow"></span>
@@ -553,6 +554,6 @@
       <p><span data-i18n="footerPrototype">A personal chronicle</span> · <span id="year"></span></p>
       <a href="#top" data-i18n="footerTop">Back to the beginning</a>
     </footer>
-  <script src="assets/script.js?v=20261019-gallery-thumbnails-v1"></script>
+  <script src="assets/script.js?v=20261019-modal-view-toggle-v1"></script>
   </body>
 </html>
