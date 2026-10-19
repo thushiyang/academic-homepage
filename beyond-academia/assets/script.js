@@ -1072,6 +1072,15 @@ let photoLightboxSlideScrollLeft = null;
 
 const pageLanguage = () => document.documentElement.lang === "zh-CN" ? "zh" : "en";
 
+const photoThumbnailSource = (sourceImage) => {
+  const source = sourceImage?.getAttribute("src") || "";
+  const cleanPath = source.split(/[?#]/, 1)[0];
+  if (!cleanPath.startsWith("assets/photos/")) return source;
+  return cleanPath
+    .replace("assets/photos/", "assets/photo-thumbnails/")
+    .replace(/\.[^./]+$/, ".webp");
+};
+
 const refreshPhotoLightboxLabels = () => {
   const copy = translations[pageLanguage()];
   photoLightboxCloseButton.setAttribute("aria-label", copy.galleryLightboxClose);
@@ -1341,7 +1350,7 @@ document.querySelectorAll("[data-gallery-row]").forEach((gallery) => {
 
     if (sourceImage) {
       const image = document.createElement("img");
-      image.src = sourceImage.getAttribute("src") || "";
+      image.src = photoThumbnailSource(sourceImage);
       image.alt = "";
       image.loading = "lazy";
       image.decoding = "async";
@@ -1420,7 +1429,7 @@ document.querySelectorAll("[data-gallery-row]").forEach((gallery) => {
 
       if (sourceImage) {
         const image = document.createElement("img");
-        image.src = sourceImage.getAttribute("src") || "";
+        image.src = photoThumbnailSource(sourceImage);
         image.alt = "";
         image.loading = "lazy";
         image.decoding = "async";
