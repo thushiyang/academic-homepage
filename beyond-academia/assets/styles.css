@@ -82,7 +82,7 @@ nav a { color: #d9dedb; text-decoration: none; font-size: 0.86rem; letter-spacin
 nav a:hover, nav a:focus-visible { color: var(--gold-bright); }
 .offline-badge { padding: 5px 9px; border: 1px solid rgba(240, 203, 117, 0.46); color: var(--gold-bright); font: 700 0.65rem/1 Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
 .research-home-link { min-width: max-content; text-decoration: none; letter-spacing: 0.08em; transition: color 160ms ease, border-color 160ms ease, background 160ms ease; }
-.research-home-link::before { content: "\2190"; margin-right: 0.55em; }
+.research-home-link::before { content: "\21A9"; margin-right: 0.5em; font-size: 1.15em; font-weight: 900; line-height: 0; }
 .research-home-link:hover, .research-home-link:focus-visible { color: #fff4d8; border-color: var(--gold-bright); background: rgba(215,166,75,0.12); outline: none; }
 .language-switch { display: inline-flex; align-items: center; gap: 4px; min-width: max-content; padding: 3px; border: 1px solid rgba(240, 203, 117, 0.34); color: #94a6a8; background: rgba(255,255,255,0.03); font: 700 0.66rem/1 Arial, sans-serif; letter-spacing: 0.08em; }
 .language-switch button { padding: 6px 7px; border: 0; color: inherit; background: transparent; font: inherit; cursor: pointer; }
