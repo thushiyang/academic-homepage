@@ -574,7 +574,7 @@ const translations = {
     researchPhoto1Title: "毕业同行",
     researchPhoto2Title: "实事求是",
     researchPhoto3Title: "温柔的家庭时刻",
-    researchPhoto4Title: "教室里的岁月",
+    researchPhoto4Title: "岁月如梭",
     researchPhoto5Title: "走向下一章",
     researchPhoto6Title: "同窗与师长",
     researchPhoto7Title: "柳荫之下",
