@@ -88,6 +88,10 @@ const translations = {
     galleryOverviewOpen: "All Photos",
     galleryOverviewKicker: "Photo Library",
     galleryOverviewClose: "Close all photos",
+    galleryLightboxOpen: "Open large view",
+    galleryLightboxClose: "Close large photo",
+    galleryLightboxPrevious: "Previous photo",
+    galleryLightboxNext: "Next photo",
     photo1Title: "Wedding Day",
     photo2Title: "The Ring Exchange",
     photo3Title: "New Year Reunion",
@@ -481,6 +485,10 @@ const translations = {
     galleryOverviewOpen: "全部照片",
     galleryOverviewKicker: "照片图库",
     galleryOverviewClose: "关闭全部照片",
+    galleryLightboxOpen: "放大查看",
+    galleryLightboxClose: "关闭大图",
+    galleryLightboxPrevious: "上一张照片",
+    galleryLightboxNext: "下一张照片",
     photo1Title: "婚礼当天",
     photo2Title: "交换戒指",
     photo3Title: "新春团聚",
@@ -1034,6 +1042,123 @@ photoOverviewDialog?.addEventListener("close", () => {
   photoOverviewReturnFocus = null;
 });
 
+const photoLightboxDialog = document.createElement("dialog");
+photoLightboxDialog.className = "photo-lightbox-dialog";
+photoLightboxDialog.innerHTML = `
+  <div class="photo-lightbox-panel">
+    <div class="photo-lightbox-stage">
+      <img class="photo-lightbox-image" alt="" />
+      <button class="photo-lightbox-nav photo-lightbox-prev" type="button" data-i18n-aria="galleryLightboxPrevious"><span aria-hidden="true">&#8249;</span></button>
+      <button class="photo-lightbox-nav photo-lightbox-next" type="button" data-i18n-aria="galleryLightboxNext"><span aria-hidden="true">&#8250;</span></button>
+    </div>
+    <footer class="photo-lightbox-caption">
+      <strong data-photo-lightbox-title></strong>
+      <span data-photo-lightbox-count></span>
+    </footer>
+    <button class="photo-lightbox-close" type="button" data-i18n-aria="galleryLightboxClose"><span aria-hidden="true">&times;</span></button>
+  </div>`;
+document.body.appendChild(photoLightboxDialog);
+
+const photoLightboxImage = photoLightboxDialog.querySelector(".photo-lightbox-image");
+const photoLightboxTitle = photoLightboxDialog.querySelector("[data-photo-lightbox-title]");
+const photoLightboxCount = photoLightboxDialog.querySelector("[data-photo-lightbox-count]");
+const photoLightboxCloseButton = photoLightboxDialog.querySelector(".photo-lightbox-close");
+const photoLightboxPreviousButton = photoLightboxDialog.querySelector(".photo-lightbox-prev");
+const photoLightboxNextButton = photoLightboxDialog.querySelector(".photo-lightbox-next");
+let photoLightboxSlides = [];
+let photoLightboxIndex = 0;
+let photoLightboxTrack = null;
+let photoLightboxSlideScrollLeft = null;
+
+const pageLanguage = () => document.documentElement.lang === "zh-CN" ? "zh" : "en";
+
+const refreshPhotoLightboxLabels = () => {
+  const copy = translations[pageLanguage()];
+  photoLightboxCloseButton.setAttribute("aria-label", copy.galleryLightboxClose);
+  photoLightboxPreviousButton.setAttribute("aria-label", copy.galleryLightboxPrevious);
+  photoLightboxNextButton.setAttribute("aria-label", copy.galleryLightboxNext);
+};
+
+const renderPhotoLightbox = () => {
+  const slide = photoLightboxSlides[photoLightboxIndex];
+  const sourceImage = slide?.querySelector("img");
+  if (!slide || !sourceImage) return;
+  const title = slide.querySelector("figcaption strong")?.textContent?.trim() || sourceImage.alt || "";
+  const number = slide.querySelector("figcaption span")?.textContent?.trim() || String(photoLightboxIndex + 1).padStart(2, "0");
+  photoLightboxImage.src = sourceImage.currentSrc || sourceImage.getAttribute("src") || "";
+  photoLightboxImage.alt = sourceImage.alt || title;
+  photoLightboxTitle.textContent = title;
+  photoLightboxCount.textContent = `${number} / ${photoLightboxSlides.length}`;
+  photoLightboxPreviousButton.disabled = photoLightboxIndex <= 0;
+  photoLightboxNextButton.disabled = photoLightboxIndex >= photoLightboxSlides.length - 1;
+  photoLightboxDialog.setAttribute("aria-label", `${title} · ${number} / ${photoLightboxSlides.length}`);
+};
+
+const movePhotoLightbox = (direction) => {
+  const nextIndex = Math.max(0, Math.min(photoLightboxSlides.length - 1, photoLightboxIndex + direction));
+  if (nextIndex === photoLightboxIndex) return;
+  photoLightboxIndex = nextIndex;
+  renderPhotoLightbox();
+};
+
+const openPhotoLightbox = ({ slides, index, track, slideScrollLeft }) => {
+  const slide = slides[index];
+  if (!slide?.querySelector("img")) return;
+  photoLightboxSlides = slides;
+  photoLightboxIndex = index;
+  photoLightboxTrack = track;
+  photoLightboxSlideScrollLeft = slideScrollLeft;
+  refreshPhotoLightboxLabels();
+  renderPhotoLightbox();
+  document.body.classList.add("photo-lightbox-open");
+  photoLightboxDialog.showModal();
+  photoLightboxCloseButton.focus({ preventScroll: true });
+};
+
+const closePhotoLightbox = () => {
+  if (photoLightboxDialog.open) photoLightboxDialog.close();
+};
+
+photoLightboxCloseButton.addEventListener("click", closePhotoLightbox);
+photoLightboxPreviousButton.addEventListener("click", () => movePhotoLightbox(-1));
+photoLightboxNextButton.addEventListener("click", () => movePhotoLightbox(1));
+photoLightboxDialog.addEventListener("click", (event) => {
+  if (event.target === photoLightboxDialog) closePhotoLightbox();
+});
+photoLightboxDialog.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    movePhotoLightbox(-1);
+  }
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    movePhotoLightbox(1);
+  }
+  if (event.key === "Home") {
+    event.preventDefault();
+    photoLightboxIndex = 0;
+    renderPhotoLightbox();
+  }
+  if (event.key === "End") {
+    event.preventDefault();
+    photoLightboxIndex = Math.max(photoLightboxSlides.length - 1, 0);
+    renderPhotoLightbox();
+  }
+});
+photoLightboxDialog.addEventListener("close", () => {
+  document.body.classList.remove("photo-lightbox-open");
+  const currentSlide = photoLightboxSlides[photoLightboxIndex];
+  if (currentSlide && photoLightboxTrack && photoLightboxSlideScrollLeft) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    photoLightboxTrack.scrollTo({ left: photoLightboxSlideScrollLeft(currentSlide), behavior: reduceMotion ? "auto" : "smooth" });
+    currentSlide.focus({ preventScroll: true });
+  }
+  photoLightboxImage.removeAttribute("src");
+  photoLightboxSlides = [];
+  photoLightboxTrack = null;
+  photoLightboxSlideScrollLeft = null;
+});
+
 let fixedScrollbarId = 0;
 const createFixedGalleryScrollbar = (scroller, anchor) => {
   const scrollbar = document.createElement("div");
@@ -1155,6 +1280,23 @@ document.querySelectorAll("[data-gallery-row]").forEach((gallery) => {
 
   const slides = Array.from(track.querySelectorAll(".photo-slide"));
   const slideScrollLeft = (slide) => slide.offsetLeft - (slides[0]?.offsetLeft || 0);
+  const openSlideInLightbox = (slide) => {
+    const index = slides.indexOf(slide);
+    if (index < 0) return;
+    openPhotoLightbox({ slides, index, track, slideScrollLeft });
+  };
+
+  slides.forEach((slide) => {
+    if (!slide.querySelector("img")) return;
+    slide.classList.add("is-lightbox-enabled");
+    slide.tabIndex = 0;
+    slide.setAttribute("role", "button");
+    slide.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openSlideInLightbox(slide);
+    });
+  });
   const tailSpacer = document.createElement("span");
   tailSpacer.className = "photo-gallery-tail";
   tailSpacer.setAttribute("aria-hidden", "true");
@@ -1303,6 +1445,11 @@ document.querySelectorAll("[data-gallery-row]").forEach((gallery) => {
       numberMark.textContent = number;
       item.appendChild(numberMark);
       item.addEventListener("click", () => {
+        if (sourceImage) {
+          closePhotoOverview();
+          window.requestAnimationFrame(() => openPhotoLightbox({ slides, index, track, slideScrollLeft }));
+          return;
+        }
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         track.scrollTo({ left: slideScrollLeft(slide), behavior: reduceMotion ? "auto" : "smooth" });
         closePhotoOverview();
@@ -1319,11 +1466,15 @@ document.querySelectorAll("[data-gallery-row]").forEach((gallery) => {
   });
 
   const refreshThumbnailLabels = () => {
+    const copy = translations[pageLanguage()];
     thumbnailButtons.forEach((button, index) => {
       const title = slides[index].querySelector("figcaption strong")?.textContent?.trim() || "";
       const number = slides[index].querySelector("figcaption span")?.textContent?.trim() || String(index + 1).padStart(2, "0");
       button.setAttribute("aria-label", `${number} · ${title}`);
       button.title = title;
+      if (slides[index].querySelector("img")) {
+        slides[index].setAttribute("aria-label", `${copy.galleryLightboxOpen}: ${number} · ${title}`);
+      }
     });
   };
 
@@ -1385,20 +1536,32 @@ document.querySelectorAll("[data-gallery-row]").forEach((gallery) => {
   let dragging = false;
   let pointerStart = 0;
   let scrollStart = 0;
+  let pointerSlide = null;
+  let pointerMoved = false;
   track.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0) return;
     dragging = true;
     pointerStart = event.clientX;
     scrollStart = track.scrollLeft;
+    pointerSlide = event.target.closest(".photo-slide");
+    pointerMoved = false;
     track.classList.add("is-dragging");
     track.setPointerCapture(event.pointerId);
   });
   track.addEventListener("pointermove", (event) => {
-    if (dragging) track.scrollLeft = scrollStart - (event.clientX - pointerStart);
+    if (!dragging) return;
+    const movement = event.clientX - pointerStart;
+    if (Math.abs(movement) > 6) pointerMoved = true;
+    track.scrollLeft = scrollStart - movement;
   });
-  const stopDragging = () => {
+  const stopDragging = (event) => {
+    const selectedSlide = pointerSlide;
+    const shouldOpenLightbox = event?.type === "pointerup" && !pointerMoved && selectedSlide?.querySelector("img");
     dragging = false;
+    pointerSlide = null;
     track.classList.remove("is-dragging");
     updateControls();
+    if (shouldOpenLightbox) openSlideInLightbox(selectedSlide);
   };
   track.addEventListener("pointerup", stopDragging);
   track.addEventListener("pointercancel", stopDragging);
