@@ -52,7 +52,7 @@ const translations = {
     chapter3Title: "Notes by the Hearth",
     chapter3Body: "Reflections on choice, responsibility, distance, and belonging after the day’s research is done.",
     chapter3Status: "Private drafts",
-    trialsTitle: "Face the Shadows. Protect What Matters.",
+    trialsTitle: "Face the Shadows.\nProtect What Matters.",
     trialsBody: "Life does not always follow an easy road. The storms we weather together teach us responsibility, give us courage, and remind us why the way home matters.",
     trialsNote: "Like a journey through Azeroth, research brings both opportunity and challenge, with each unanswered question opening another path forward.",
     trial1Title: "Guardianship",
