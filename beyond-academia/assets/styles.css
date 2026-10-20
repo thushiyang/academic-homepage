@@ -333,6 +333,9 @@ html[lang="en"] .about-panel h2 { max-width: none; font-size: clamp(2.7rem, 4.55
 html[lang="en"] .trials-copy h2 { white-space: pre; text-wrap: nowrap; font-size: clamp(2rem, 3.2vw, 3.5rem); }
 html[lang="en"] .homecoming-copy h2 { white-space: pre; text-wrap: nowrap; font-size: clamp(2rem, 3vw, 3.5rem); }
 @media (max-width: 620px) { html[lang="en"] .trials-copy h2 { font-size: clamp(1.4rem, 6.4vw, 2.45rem); } }
+/* Keep section introductions readable while allowing natural wrapping at each viewport. */
+:is(.hero-intro, .chapter-section .section-heading > p:last-child, .trials-copy > p:not(.eyebrow):not(.trials-note), .homecoming-copy > p:not(.eyebrow), .notes-section .section-heading > p:last-child, .gallery-section > .section-heading > p:last-child, .nga-intro, .about-panel > p:not(.eyebrow)) { max-width: 68ch; text-wrap: pretty; }
+html[lang="zh-CN"] :is(.hero-intro, .chapter-section .section-heading > p:last-child, .trials-copy > p:not(.eyebrow):not(.trials-note), .homecoming-copy > p:not(.eyebrow), .notes-section .section-heading > p:last-child, .gallery-section > .section-heading > p:last-child, .nga-intro, .about-panel > p:not(.eyebrow)) { max-width: 34em; }
 html[lang="zh-CN"] .homecoming-copy blockquote,
 html[lang="zh-CN"] .privacy-panel li { word-break: auto-phrase; }
 
