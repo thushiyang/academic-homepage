@@ -336,6 +336,20 @@ html[lang="en"] .homecoming-copy h2 { white-space: pre; text-wrap: nowrap; font-
 /* Keep section introductions readable while allowing natural wrapping at each viewport. */
 :is(.hero-intro, .chapter-section .section-heading > p:last-child, .trials-copy > p:not(.eyebrow):not(.trials-note), .homecoming-copy > p:not(.eyebrow), .notes-section .section-heading > p:last-child, .gallery-section > .section-heading > p:last-child, .nga-intro, .about-panel > p:not(.eyebrow)) { max-width: 68ch; text-wrap: pretty; }
 html[lang="zh-CN"] :is(.hero-intro, .chapter-section .section-heading > p:last-child, .trials-copy > p:not(.eyebrow):not(.trials-note), .homecoming-copy > p:not(.eyebrow), .notes-section .section-heading > p:last-child, .gallery-section > .section-heading > p:last-child, .nga-intro, .about-panel > p:not(.eyebrow)) { max-width: 34em; }
+/* Match each English introduction to its own heading, with a fixed upper width. */
+html[lang="en"] .chapter-section .section-heading > p:last-child { max-width: min(980px, 64vw); }
+html[lang="en"] .trials-copy > p:not(.eyebrow) { max-width: min(620px, 34vw); text-wrap: pretty; }
+html[lang="en"] .homecoming-copy > p:not(.eyebrow),
+html[lang="en"] .homecoming-copy blockquote { max-width: min(660px, 28vw); }
+html[lang="en"] .about-panel { max-width: none; }
+html[lang="en"] .about-panel > p:not(.eyebrow) { max-width: min(900px, 56vw); }
+@media (max-width: 980px) {
+  html[lang="en"] .chapter-section .section-heading > p:last-child,
+  html[lang="en"] .trials-copy > p:not(.eyebrow),
+  html[lang="en"] .homecoming-copy > p:not(.eyebrow),
+  html[lang="en"] .homecoming-copy blockquote,
+  html[lang="en"] .about-panel > p:not(.eyebrow) { max-width: 100%; }
+}
 html[lang="zh-CN"] .homecoming-copy blockquote,
 html[lang="zh-CN"] .privacy-panel li { word-break: auto-phrase; }
 
