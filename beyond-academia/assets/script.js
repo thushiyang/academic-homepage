@@ -393,7 +393,7 @@ const translations = {
     gallery2Title: "Harbor and Horizon",
     gallery3Title: "A Port Beyond the City",
     gallery4Title: "Ships on the Wild Shore",
-    aboutTitle: "Know the Researcher\n—and the World the Researcher Cherishes",
+    aboutTitle: "Know the Researcher—and the World the Researcher Cherishes",
     aboutBody1: "An academic homepage presents research questions, publications, and projects. Of Love and Family preserves the quieter foundations beneath that work: the support of family, the perspective offered by friends, and the ways life experience shapes judgment and responsibility.",
     aboutBody2: "This space brings together two parts of my life: a real-world chronicle of family, friendship, and journeys, and the remarkable opportunities and challenges encountered while traveling through Azeroth.",
     privacyTitle: "With Gratitude",
