@@ -26,7 +26,7 @@ const translations = {
     heroEyebrow: "A Personal Chronicle & Acknowledgement",
     heroTitle: "Of\u00a0\u00a0Love and Family",
     heroSubtitle: "爱与家庭",
-    heroIntro: "Beyond research, I am shaped by family and friendship, by journeys taken and people encountered along the way. This is a slowly growing personal chronicle of how love gives every journey a place to return to.",
+    heroIntro: "Beyond research, I am shaped by family and friendship, by journeys taken and\npeople encountered along the way. This is a slowly growing personal chronicle of how love\ngives every journey a place to return to.",
     heroCastAria: "A small fellowship of recurring characters",
     cast1Alt: "Male lead, a fuller-faced short-haired human paladin in golden armor",
     cast2Alt: "Female lead, a front-facing human priest illuminated by holy light",
