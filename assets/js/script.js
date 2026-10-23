@@ -182,6 +182,32 @@ const closeModal = (modal) => {
   document.body.classList.remove("modal-open");
 };
 
+// Branch pages share Home's Beyond Academia confirmation without duplicating its markup.
+if (document.querySelector("[data-love-family-entry]") && !document.getElementById("beyond-research-modal")) {
+  const modal = document.createElement("div");
+  modal.className = "modal beyond-research-modal is-hidden";
+  modal.id = "beyond-research-modal";
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-labelledby", "beyond-research-title");
+  modal.setAttribute("aria-describedby", "beyond-research-copy");
+  modal.innerHTML = `
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel beyond-research-panel" role="document">
+      <button class="modal-close beyond-research-close" type="button" data-close-modal aria-label="Close this question">Close</button>
+      <p class="eyebrow">Beyond Academia · 学术之外</p>
+      <h2 id="beyond-research-title">Curious about the person behind the research?</h2>
+      <p id="beyond-research-copy">Get to know me beyond academia.</p>
+      <div class="beyond-research-actions">
+        <a class="button primary" href="#" data-love-family-confirm>Yes, I am interested</a>
+        <button class="button" type="button" data-close-modal>Stay on the academic homepage</button>
+      </div>
+      <p class="beyond-research-note">You will enter the separate <em>Of Love and Family</em> module.</p>
+    </div>
+  `;
+  document.body.append(modal);
+}
+
 document.querySelectorAll("[data-love-family-entry]").forEach((link) => {
   link.addEventListener("click", (event) => {
     const modal = document.getElementById("beyond-research-modal");

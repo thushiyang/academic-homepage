@@ -320,6 +320,7 @@ const translations = {
     friendsPhoto127Title: "Friends in the Tropical Garden",
     friendsPhoto128Title: "A Magical Banquet",
     friendsPhoto129Title: "Night at Marina Bay",
+    researchPhoto141Title: "At the CFI Symposium",
     note1Alt: "A warmly lit tavern beside a Stormwind canal",
     note1Title: "The Story Behind a Photograph",
     note1Body: "A photograph, its time and place, the permission of those pictured, and a brief text will be added after review.",
@@ -721,6 +722,7 @@ const translations = {
     friendsPhoto127Title: "热带花园同行",
     friendsPhoto128Title: "魔法宴会",
     friendsPhoto129Title: "滨海湾之夜",
+    researchPhoto141Title: "CFI 学术研讨会留影",
     note1Alt: "暴风城运河旁温暖灯光中的旅店",
     note1Title: "一张照片背后的故事",
     note1Body: "照片、时间、人物许可与一段简短文字将在内容审核后加入。",
@@ -1124,6 +1126,8 @@ let photoLightboxSlideScrollLeft = null;
 const pageLanguage = () => document.documentElement.lang === "zh-CN" ? "zh" : "en";
 
 const photoThumbnailSource = (sourceImage) => {
+  const explicitThumbnail = sourceImage?.dataset.photoThumbnail;
+  if (explicitThumbnail) return explicitThumbnail;
   const source = sourceImage?.getAttribute("src") || "";
   const cleanPath = source.split(/[?#]/, 1)[0];
   if (!cleanPath.startsWith("assets/photos/")) return source;
